@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Teacher Page</title>
+<style type="text/css">
+	.teacher-form {
+		width: 560px;
+		margin: 0 auto;
+		background-color: #eee;
+		padding: 20px;	
+	}
+	table{
+		border-collapse: collapse;
+		width: 100%;
+	}
+	td{
+		font-size: 16px;
+		padding: 5px;
+	}
+	input[type="text"],
+	
+	select[type="text"],
+	textarea[type="text"]{
+		width: 92%;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		padding: 8px 10px;
+	}
+	.button {
+		padding: 7px 25px;
+		border: none;
+	}
+	.submit-btn {
+		background-color: #f00;
+		color: #FFF;
+	}
+	.submit-btn:hover {
+		background-color: #b00606;
+	}
+	.reset-btn {
+		background-color: #999;
+		color: #FFF;
+	}
+	.reset-btn:hover {
+		background-color: #666;
+		color: #FFF;
+	}	
+</style>			
+</head>
+<body>
+	<div style="width: 1024px; margin: 0 auto;">
+			<form class="teacher-form" name="Teacherform" method="post" action="teacher.php">
+				<table>				
+					<tr>
+						<td colspan="2" style="text-align: center;"><h2>Teacher's Register Page</h2></td>
+					</tr>
+					<tr>
+						<td style="width: 25%;"><label for="teacher_name">Teacher Name</label></td>
+						<td style="width: 75%;"><input type="text" name="teacher_name" id="teacher_name"></td>
+					</tr>
+					<tr>
+						<td><label for="regd_no">Regd No</label></td>
+						<td><input type="text" name="regd_no" id="regd_no"></td>
+					</tr>
+					<tr>
+						<td><label for="mobile_no">Mobile No</label></td>
+						<td><input type="text" name="mobile_no" id="mobile_no"></td>
+					</tr>
+					<tr>
+						<td><label for="gender">Gender</label></td>
+						<td><input type="radio" name="gender" id="gender" value="M"/>Male
+							<input type="radio" name="gender" id="gender" value="F"/>Female</td>
+					</tr>
+					<tr>
+						<td><label for="department_name">Department name</label></td>
+						<td><select name="department_name" size="1" type="text">
+					            <option selected value="">Select Branch Name</option>
+					            <option value="CSE">CSE</option>
+					            <option value="ETC">ETC</option>
+					            <option value="IT">IT</option>
+					            <option value="EEE">EEE</option>
+					            <option value="BIO.TECH">BIO.TECH</option>
+					            <option value="CIVIL">CIVIL</option>
+	          				</select><br><br></td>
+					</tr>
+					<tr>
+					<td><label for="information">Information</label></td>
+					<td><textarea type="text" name="information" rows="5" cols="30" ></textarea></td>
+				
+					</tr>	
+					<tr>
+						<td>&nbsp;</td>
+						<td><input class="button submit-btn" type="submit" value="Submit"> <input class="button reset-btn" type="Reset"> <a href="home.html">Back</a></td>
+					</tr>				
+				</table>
+			</form>
+		</div>
+</body>
+</html>

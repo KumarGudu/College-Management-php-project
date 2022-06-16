@@ -1,0 +1,64 @@
+
+.....
+select
+    SUM(CASE WHEN department_name='CSE' THEN PlayerScore END) AS 'MAXWELL TOTAL SCORE',
+  
+  from selectMultipleSumDemo;
+.....
+
+SELECT ROUND(SUM(CASE WHEN department_name='CSE' THEN studentpayment.amount END),2) -
+ (SELECT ROUND(SUM(CASE WHEN department_name='CSE' THEN teacherpayment.amount END),2) 
+ FROM teacherpayment)
+ AS total FROM studentpayment
+ ON student.student_roll_no=studentpayment.student_roll_no
+GROUP BY student.department_name
+
+
+SELECT ROUND(SUM(CASE WHEN department_name='CSE' THEN teacherpayment.amount END),2),teacher.department_name FROM teacherpayment JOIN teacher ON teacher.regd_no=teacherpayment.regd_no GROUP BY teacher.department_name
+
+
+SELECT ROUND(SUM(CASE WHEN department_name='CSE' THEN studentpayment.amount END),2)-
+(SELECT ROUND(SUM(CASE WHEN department_name='CSE' THEN teacherpayment.amount END),2) 
+ FROM teacherpayment),student.department_name 
+FROM studentpayment 
+ JOIN student 
+ON student.student_roll_no=studentpayment.student_roll_no 
+GROUP BY student.department_name
+
+
+
+
+
+
+
+SELECT ROUND(SUM(studentpayment.amount),2),student.department_name 
+			FROM studentpayment 
+			INNER JOIN student 
+			ON student.student_roll_no = studentpayment.student_roll_no 
+			GROUP BY student.department_name
+SELECT ROUND(SUM(studentpayment.amount),2)-
+(SELECT ROUND(SUM(teacherpayment.amount),2) 
+ FROM teacherpayment),student.department_name 
+FROM studentpayment 
+ JOIN student 
+ON student.student_roll_no=studentpayment.student_roll_no 
+GROUP BY student.department_name
+
+
+
+608507.09
+CSE-
+
+36167.49
+CSE
+
+
+
+
+479536.83
+CSE
+
+
+
+
+

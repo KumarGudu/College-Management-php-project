@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Student Payment Page</title>
+<style type="text/css">
+	.payment-form {
+		width: 560px;
+		margin: 0 auto;
+		background-color: #eee;
+		padding: 20px;	
+	}
+	table{
+		border-collapse: collapse;
+		width: 100%;
+	}
+	td{
+		font-size: 16px;
+		padding: 5px;
+	}
+	input[type="text"],
+	input[type="amount"],
+	select[type="text"],
+	textarea[type="text"]{
+		width: 92%;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		padding: 8px 10px;
+	}
+	.button {
+		padding: 7px 25px;
+		border: none;
+	}
+	.submit-btn {
+		background-color: #f00;
+		color: #FFF;
+	}
+	.submit-btn:hover {
+		background-color: #b00606;
+	}
+	.reset-btn {
+		background-color: #999;
+		color: #FFF;
+	}
+	.reset-btn:hover {
+		background-color: #666;
+		color: #FFF;
+	}	
+</style>
+</head>
+<body>
+		<div style="width: 1024px; margin: 0 auto;">
+			<form class="payment-form" name="Paymentform" method="post" action="studentpayment.php">
+				<table>					
+					<tr>
+						<td colspan="2" style="text-align: center;"><h2>Student payment</h2></td>
+					</tr>
+					<tr>
+						<td style="width: 25%;"><label for="student_roll_no">Roll No</label></td>
+						<td style="width: 75%;"><input type="text" name="student_roll_no" id="student_roll_no"></td>
+					</tr>
+					<tr>
+						<td><label for="payment_method">Payment method</label></td>
+						<td><select name="payment_method" size="1" type="text">
+					            <option selected value="">Select Payment Method</option>
+					            <option value="CARD">CARD</option>
+					            <option value="BHIM UPI">BHIM UPI</option>
+					            <option value="CASH">CASH</option>
+					            <option value="CHEQUE">CHEQUE</option>
+					            <option value="ONLINE">ONLINE</option>
+					            <option value="MONEY TRANSFER">MONEY TRANSFER</option>
+					            <option value="OTHER">OTHER</option>
+	          				</select><br><br></td>
+					</tr>
+					<tr>
+						<td><label for="amount">Amount</label></td>
+						<td><input type="amount" name="amount" id="amount"></td>
+					</tr>
+					<tr>
+						<td style="width: 25%;"><label for="payment_info">Information</label></td>
+						<td><textarea name="payment_info" type="text" rows="5" cols="30" ></textarea></td>
+					</tr>	
+					<tr>
+						<td>&nbsp;</td>
+						<td><input class="button submit-btn" type="submit" value="Submit"> <input class="button reset-btn" type="Reset"><a href="home.html">Back</a></td>
+					</tr>
+					
+				</table>
+			</form>
+
+		</div>
+		
+</body>
+</html>
