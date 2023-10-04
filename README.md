@@ -1,3 +1,3 @@
 # College-Management-php-project
 
-## A college management system build with PHP
+## A college management system built with PHP
